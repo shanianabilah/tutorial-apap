@@ -5,3 +5,4 @@
 2. Link berhasil dibuka karena sudah ada template add-resto
 3. http://localhost:8080/restoran/view/idRestoran/1
 4. Akan 2 restoran yang sudah ditambahkan
+![Bukti](bukti.png)
