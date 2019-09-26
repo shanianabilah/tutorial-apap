@@ -1,17 +1,61 @@
 package apap.tutorial.gopud.model;
 
-public class RestoranModel{
-    private String idRestoran;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.io.Serializable;
+import java.util.List;
+
+@Entity
+@Table(name="restoran")
+public class RestoranModel implements Serializable, Comparable<RestoranModel>{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idRestoran;
+
+    @NotNull
+    @Size(max = 20)
+    @Column(name="nama", nullable = false)
     private String nama;
+
+    @NotNull
+    @Size(max = 30)
+    @Column(name = "alamat", nullable = false)
     private String alamat;
+
+    @NotNull
+    @Column(name = "nomorTelepon", nullable = false)
     private Integer nomorTelepon;
 
-    public String getIdRestoran() {
+    @NotNull
+    @Column(name = "rating", nullable = false)
+    private Integer rating = 0;
+
+    @OneToMany(mappedBy = "restoran", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<MenuModel> listMenu;
+
+    public void setIdRestoran(Long idRestoran) {
+        this.idRestoran = idRestoran;
+    }
+
+    public Long getIdRestoran() {
         return idRestoran;
     }
 
-    public void setIdRestoran(String idRestoran) {
-        this.idRestoran = idRestoran;
+    public Integer getRating() {
+        return rating;
+    }
+
+    public void setRating(Integer rating) {
+        this.rating = rating;
+    }
+
+    public List<MenuModel> getListMenu() {
+        return listMenu;
+    }
+
+    public void setListMenu(List<MenuModel> listMenu) {
+        this.listMenu = listMenu;
     }
 
     public String getNama() {
@@ -38,10 +82,7 @@ public class RestoranModel{
         this.nomorTelepon = nomorTelepon;
     }
 
-    public RestoranModel(String idRestoran, String nama, String alamat, Integer nomorTelepon) {
-        this.idRestoran = idRestoran;
-        this.nama = nama;
-        this.alamat = alamat;
-        this.nomorTelepon = nomorTelepon;
+    public int compareTo(RestoranModel other) {
+        return this.nama.toLowerCase().compareTo(other.nama.toLowerCase());
     }
 }
