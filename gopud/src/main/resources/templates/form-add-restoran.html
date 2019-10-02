@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title> Add Restoran </title>
+
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
 </head>
 <body>
-<h3> Tambah Restoran</h3>
-<form th:action="@{/restoran/add}" th:objects="${restoran}" method="POST">
+    <nav th:replace="fragments/fragment :: navbar (brand='Add Restoran')"></nav>
 
-    Nama: <br>
-    <input type="text" name="nama"/>
-    <br>
-    Alamat: <br>
-    <input type="text" name="alamat"/>
-    <br>
-    Nomor Telepon: <br>
-    <input type="number" name="nomorTelepon"/>
-    <br>
+    <h3> Tambah Restoran</h3>
+    <form th:action="@{/restoran/add}" th:objects="${restoran}" method="POST">
 
-    <button type="submit"> Submit </button>
-</form>
+        Nama: <br>
+        <input type="text" name="nama"/>
+        <br>
+        Alamat: <br>
+        <input type="text" name="alamat"/>
+        <br>
+        Nomor Telepon: <br>
+        <input type="number" name="nomorTelepon"/>
+        <br>
+
+        <button type="submit"> Submit </button>
+    </form>
 </body>
 </html>
