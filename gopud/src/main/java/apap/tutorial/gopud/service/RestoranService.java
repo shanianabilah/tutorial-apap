@@ -1,6 +1,8 @@
 package apap.tutorial.gopud.service;
 
 import java.util.List;
+import java.util.Optional;
+
 import apap.tutorial.gopud.model.RestoranModel;
 
 public interface RestoranService{
@@ -12,7 +14,9 @@ public interface RestoranService{
     List<RestoranModel> getRestoranList();
 
     // method untuk mendapatkan data sebuah restoran berdasarkan idRestoran
-    RestoranModel getRestoranByIdRestoran(String idRestoran);
+    Optional<RestoranModel> getRestoranByIdRestoran(Long idRestoran);
+
+    RestoranModel changeRestoran(RestoranModel restoranModel);
 
     // method untuk delete resto
     void deleteResto(RestoranModel resto);
