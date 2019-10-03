@@ -52,7 +52,7 @@ public class MenuController {
     }
 
     @RequestMapping(value ="/menu/add/{idRestoran}", method=RequestMethod.POST, params= {"addRow"})
-    private String addRow(@ModelAttribute RestoranModel restoran, BindingResult bindingResult, Model model) {
+    private String addRow(@ModelAttribute RestoranModel restoran, Model model) {
         if(restoran.getListMenu() == null) {
             restoran.setListMenu(new ArrayList<MenuModel>());
         }
@@ -63,7 +63,7 @@ public class MenuController {
     }
 
     @RequestMapping(value ="/menu/add/{idRestoran}", method=RequestMethod.POST, params= {"removeRow"})
-    private String removeRow(@ModelAttribute RestoranModel restoran, final BindingResult bindingResult, final HttpServletRequest req, Model model) {
+    private String removeRow(@ModelAttribute RestoranModel restoran , final HttpServletRequest req, Model model) {
         final Integer rowId = Integer.valueOf(req.getParameter("removeRow"));
         restoran.getListMenu().remove(rowId.intValue());
 
