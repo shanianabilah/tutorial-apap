@@ -2,6 +2,7 @@ package apap.tutorial.gopud.service;
 
 import apap.tutorial.gopud.model.MenuModel;
 import apap.tutorial.gopud.repository.MenuDb;
+import net.bytebuddy.TypeCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -49,5 +50,10 @@ public class MenuServiceImpl implements MenuService {
     public void deleteMenu(MenuModel menu) {
         // Mengambil object meny yang ingin dihapus
         menuDb.delete(menu);
+    }
+
+    @Override
+    public List<MenuModel> getListMenuOrderByHargaAsc(Long idRestoran) {
+        return menuDb.findByRestoranIdRestoranOrderByHarga(idRestoran);
     }
 }

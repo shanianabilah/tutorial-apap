@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>ERROR</title>
+
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
 </head>
 <body>
-<h2> Restoran tidak bisa dihapus karena memiliki menu </h2>
+    <nav th:replace="fragments/fragment :: navbar (brand='Error')"></nav>
+
+    <h2> Restoran tidak bisa dihapus karena memiliki menu </h2>
 </body>
 </html>
