@@ -52,4 +52,27 @@
     th:object digunakan untuk membuat object di html yang kemudian akan dirender oleh object dari method addAttribute yang ada di controller. sehingga object
     yang ada di html juga merupakan object yang ada di controller
     
+###TUTORIAL 5
+1. Jelaskan bagian mana saja dari test yang dibuat pada latihan no 2 adalah given, when, dan and
+   then.
+   - given : menginisiasi RestoranModel dan ketika restoranService.getRestoranByIdRestoran(1L), 
+             maka akan mengembalikan newRestoran sebagai RestoranModel yang telah diinisiasi
+   - when : yang diuji adalah restoranService.getRestoranByIdRestoran(1L)
+   - and then : hasil yang diharapkan seperti yang ada dalam codingan. lalu mem-verify
+                apakah restoranService ketika dipanggil sekali akan melakukan interaksi .getRestranByIdRestoran(1L)
+   
+2. Jelaskan perbedaan line coverage dan logic coverage.
+    - Line coverage adalah Line coverage mengukur berapa banyak statement yang diambil (statement biasanya berupa lien of code, tidak termasuk comments, conditionals, dll)
+    - Logic coverage adalah kondisi dimana terhubung dengan logical operator untuk membuat sebuah keputusan
+    
+3. Pada keadaan ideal, apa yang seharusnya dibuat terlebih dahulu, code atau unit test? Mengapa
+   seperti itu? Apa akibatnya jika urutannya dibalik, adakah risiko tak terlihat yang mungkin
+   terjadi?
+   Idealnya, unit test seharusnya dibuat terlebih dahulu untuk menentukan fungsionalitas yang seharusnya dapat dilakukan oleh program tersebut.
+   Jika urutannya pengerjaannya dibalik mungkin saja terjadi kekurangan dalam program karena terdapat fungsionalitas yang terlewat.
+   
+4. [Bonus] Jelaskan mengapa pada latihan no 3, main class spring tidak diikutsertakan ke dalam
+   perhitungan coverage? Apa saja yang dapat menyebabkan suatu class dapat di-exclude dari
+   perhitungan code coverage.
+    
 
