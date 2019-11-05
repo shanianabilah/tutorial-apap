@@ -23,7 +23,7 @@ public class RecipeRestServiceImpl implements RecipeRestService{
         return this.webClient.get().uri(uriBuilder -> uriBuilder
                 .queryParam("excludeIngredient", excludeIngredient)
                 .queryParam("cuisine", "German")
-                .queryParam("apiKey", "0ded41d8da7f4dff95a106c2db13ae25")
+                .queryParam("apiKey", "47a85196a0964e27bb5d5f7cd1ad8682")
                 .build()).retrieve()
                 .bodyToMono(ResultsDetail.class);
     }
