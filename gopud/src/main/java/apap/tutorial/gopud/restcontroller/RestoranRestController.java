@@ -1,7 +1,9 @@
 package apap.tutorial.gopud.restcontroller;
 
 import apap.tutorial.gopud.model.RestoranModel;
+import apap.tutorial.gopud.rest.ChefDetail;
 import apap.tutorial.gopud.rest.RestoranDetail;
+import apap.tutorial.gopud.service.ChefRestService;
 import apap.tutorial.gopud.service.RestoranRestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,6 +23,9 @@ import java.util.NoSuchElementException;
 public class RestoranRestController {
     @Autowired
     private RestoranRestService restoranRestService;
+
+    @Autowired
+    private ChefRestService chefRestService;
 
     @PostMapping(value = "/restoran")
     private RestoranModel createRestoran(@Valid @RequestBody RestoranModel restoran, BindingResult bindingResult){
@@ -79,5 +84,10 @@ public class RestoranRestController {
     @GetMapping(value = "/full")
     private Mono<RestoranDetail> postStatus(){
         return restoranRestService.postStatus();
+    }
+
+    @GetMapping(value="/restoran/chef")
+    private Mono<ChefDetail> getChef(@RequestParam String nama){
+        return chefRestService.getChef(nama);
     }
 }
