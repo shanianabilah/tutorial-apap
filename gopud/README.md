@@ -74,5 +74,16 @@
 4. [Bonus] Jelaskan mengapa pada latihan no 3, main class spring tidak diikutsertakan ke dalam
    perhitungan coverage? Apa saja yang dapat menyebabkan suatu class dapat di-exclude dari
    perhitungan code coverage.
-    
 
+####TUTORIAL 6
+1. Apa itu postman? Apa kegunaan dari postman?
+    - Postman merupakan sebuah aplikasi berupa plugin untuk browser chrome sebagai REST Client atau istilahnya adalah aplikasi yang digunakan untuk menguuji coba REST API yang telah dbuat.
+    - Postman merupakan tool wajib untuk para developer yang berkutat pada pembuatan API
+    - Fungsi utama dari postman adalah sebagai GUI API Caller, tetapi postman sekarang juga menyadiakan fitur lain, yaitu Sharing Collection API for Documentation (free), Testing API (free), Realtime Collaboration Team (paid), Monitoring API (paid), Integration (paid). 
+    - Postman sangat direkomendasikan untuk develop API
+
+2. Apa kegunaan dari annotation @JsonIgnoreProperties?
+   Untuk menekan serialisasi properti (selama serialisasi), atau mengabaikan pemrosesan properti JSON yang dibaca (saat deserialisasi).
+
+3. Apa itu ResponseEntity dan apa kegunaannya?
+   ResponseEntity mewakili seluruh respons HTTP: kode status, header, dan body. Kegunaan dari ResponseEntity adalah untuk mengkonfigurasi respons HTTP sepenuhnya.
