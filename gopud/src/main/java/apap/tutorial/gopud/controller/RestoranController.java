@@ -1,7 +1,6 @@
 package apap.tutorial.gopud.controller;
 
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import apap.tutorial.gopud.model.MenuModel;
@@ -24,8 +23,8 @@ public class RestoranController{
     @Autowired
     private MenuService menuService;
 
-    @RequestMapping("/")
-    public String home() {return "home";}
+    /*@RequestMapping("/")
+    public String home() {return "home";}*/
 
     // URL mapping yang digunakan untuk mengakses halaman add restoran
     @RequestMapping(value = "/restoran/add", method = RequestMethod.GET)
@@ -131,7 +130,7 @@ public class RestoranController{
         // Mengambil objek RestoranModel yang dituju
         RestoranModel restoran = restoranService.getRestoranByIdRestoran(idRestoran).get();
         if(restoran == null || idRestoran.equals("")){
-            return "error";
+            return "null-error";
         }
         else{
             // Add model restoran ke "resto" untuk dirender
