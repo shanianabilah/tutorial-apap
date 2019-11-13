@@ -1,4 +1,4 @@
-package apap.tutorial.gopud.controller;
+package apap.tutorial.gopud.restcontroller;
 
 import apap.tutorial.gopud.rest.ResultsDetail;
 import apap.tutorial.gopud.service.RecipeRestService;
