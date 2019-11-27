@@ -1,0 +1,7 @@
+### TUTORIAL 8
+1. untuk menyelesaikan soal nomor 1, saya memodifikasi checkbox pada line input checkbox yang berada pada file item.js sehingga checkbox hanya muncul pada list favorite. apabila checked=true maka checkbox akan muncul, sedangkan 
+2. untuk menyelesaikan soal nomor 2, saya menghapus baris else yang berfungsi untuk menghapus menu dari targetInd yang berada pada app.js sehingga menu pada bagian kiri tidak bisa menghapus menu dari daftar favorite. menu bagian kiri hanya bisa melakukan add to favorite
+
+3. untuk menyelasikan soal nomor 3, saya menambahkan function pada app.js yang berfungsi untuk menyembunyikan daftar favorite menggunakan function handleToggle. pada constructor defaultnya adalah menyembunyikan daftar favorite. kemudian apabila checkbox show favorite ditekan, akan memanggil function handleToggle tadi yang akan mengubah state dari blind menjadi show dan sebaliknya.
+
+4. untuk menyelesaikan soal nomor 4, saya membuat file baru di folder components yang bernama EmptyState.js. file tersebut berisi tulisan yang akan ditampilkan apabila belum ada menu yang ditambahkan ke daftar favorite. lalu pada file App.js saya mengimport file yang baru dibikin, yaitu EmptyState. kemudian memodifikasi sedikit bagian daftar favorite sehingga apabila favItems belum ada isinya, maka akan memunculkan empty state yang sudah dibuat sebelumnya.
