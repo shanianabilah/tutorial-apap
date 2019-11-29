@@ -86,7 +86,7 @@ class Restorans extends Component{
         const fetchedRestorans = [];
         const response = await axios.get("/restoran");
         for (let key in response.data){
-            if (response.data[key].nama.toLowerCase().includes(name.toLowerCase())){
+            if (response.data[key].nama.toLowerCase().startsWith(name.toLowerCase())){
                 fetchedRestorans.push({
                     ...response.data[key]
                 });
