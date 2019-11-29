@@ -192,7 +192,6 @@ class Restorans extends Component{
     }
 
     render(){
-        console.log("render()");
         // pagination
         const lastIndex = this.state.currPage*this.state.perPage;
         const firstIndex = lastIndex - this.state.perPage;
