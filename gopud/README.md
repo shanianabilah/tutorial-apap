@@ -110,3 +110,31 @@
    - UserDetailsServiceImpl.java berguna untuk membangun autentikasi user. didalam class ini dilakukan extends terhadap UserServiceDetail dari spring security.
      Class ini akan menghasilkan UserDetail object yang akan memberikan informasi terkait user yang terdapat dari db dan juga memberikan otorisasi
      yang dimiliki user sesuai dengan role yang dimiliki. Sedangkan UserServiceImpl digunakan untuk mengatur mapping yang dilakukan user
+
+### TUTORIAL 8
+1. untuk menyelesaikan soal nomor 1, saya memodifikasi checkbox pada line input checkbox yang berada pada file item.js sehingga checkbox hanya muncul pada list favorite. apabila checked=true maka checkbox akan muncul, sedangkan 
+2. untuk menyelesaikan soal nomor 2, saya menghapus baris else yang berfungsi untuk menghapus menu dari targetInd yang berada pada app.js sehingga menu pada bagian kiri tidak bisa menghapus menu dari daftar favorite. menu bagian kiri hanya bisa melakukan add to favorite
+
+3. untuk menyelasikan soal nomor 3, saya menambahkan function pada app.js yang berfungsi untuk menyembunyikan daftar favorite menggunakan function handleToggle. pada constructor defaultnya adalah menyembunyikan daftar favorite. kemudian apabila checkbox show favorite ditekan, akan memanggil function handleToggle tadi yang akan mengubah state dari blind menjadi show dan sebaliknya.
+
+4. untuk menyelesaikan soal nomor 4, saya membuat file baru di folder components yang bernama EmptyState.js. file tersebut berisi tulisan yang akan ditampilkan apabila belum ada menu yang ditambahkan ke daftar favorite. lalu pada file App.js saya mengimport file yang baru dibikin, yaitu EmptyState. kemudian memodifikasi sedikit bagian daftar favorite sehingga apabila favItems belum ada isinya, maka akan memunculkan empty state yang sudah dibuat sebelumnya.
+
+### TUTORIAL 9
+1. Ceritakan langkah - langkah yang kalian lakukan untuk solve LATIHAN no.1, dan
+mengapa kalian melakukan langkah - langkah tersebut?
+    - Mengganti state pada method submitAddRestoran menjadi string kosong agar setelah menekan tombol submit pada saat tambah restoran, state yg berisi data restoran akan menjadi kosong
+    - Mengganti state pada method submitEditRestoran menjadi string kosong agar setelah menekan tombol submit pada saat edit restoran, state yg berisi data restoran akan menjadi kosong
+2. Jelaskan fungsi dari async dan await!
+    - async ensures that the function returns a promise
+    - await makes JavaScript wait until that promise settles and returns its result.
+3. Masukkan jawaban dari TODO (Screenshot) pada Component Lifecycle pada
+pertanyaan ini.
+![tutorial9](tutorial9.png)
+4. Jelaskan fungsi dari componentDidMount, shouldComponentUpdate,
+componentDidUpdate, componentWillReceiveProps,
+componentWillUnmount.
+    - componentDidMount: saat component berhasil di render untuk pertama kalinya
+    - shouldComponentUpdate: dipanggil setelah componentWillReceiveProps dipanggil dan akan mengembalikan antara true atau false. apabila true, maka component akan di update, sebaliknya apabila false maka component tidak di update
+    - componentDidUpdate: dipanggil setelah render berhasil dijalankan
+    - componentWillReceiveProps: saat sebuah instansi dari suatu component di update. dipanggil sebelum render dimulai
+    - componentWillUnmount: dpnaggil sebelum suatu component dipindahkan dari DOM. jika suatu component membutuhkan cleanup, maka seharusnya ditaruh di dalam componentWillMount
