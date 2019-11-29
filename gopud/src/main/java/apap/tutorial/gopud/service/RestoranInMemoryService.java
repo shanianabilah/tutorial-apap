@@ -1,5 +1,6 @@
-package apap.tutorial.gopud.model;
+package apap.tutorial.gopud.service;
 
+import apap.tutorial.gopud.model.RestoranModel;
 import apap.tutorial.gopud.service.RestoranService;
 import org.springframework.stereotype.Service;
 
